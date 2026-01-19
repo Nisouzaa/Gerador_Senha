@@ -1,6 +1,6 @@
 // Selecionamdo elemntos
-const generatePasswordButton = document.querySelector("generate-password");
-const generatedPasswordElement = document.querySelector("generated-password");
+const generatePasswordButton = document.querySelector("#generate-password");
+const generatedPasswordElement = document.querySelector("#generated-password");
 
 // Após Refatoração
 const openCloseGeneratorButton = document.querySelector(
