@@ -1,14 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="/Js/script.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="register-container">
+      <div id="register-banner">
+        <div id="banner-layer">
+          <h1>Seja bem-vindo</h1>
+        </div>
+      </div>
+      <div id="register-form">
+        <h2>Crie sua conta:</h2>
+        <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+        <div class="fomr-control">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite seu nome"
+          />
+        </div>
+        <div class="fomr-control">
+          <label for="email">E-mail</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+          />
+        </div>
+        <div class="fomr-control">
+          <label for="password">Senha</label>
+          <input
+            type="text"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha"
+          />
+        </div>
+        <p>
+          Quer ajuda para criar uma senha segura?
+          <span id="generate-password">Clique aqui.</span>
+        </p>
+        <div id="generated-password">
+          <p>Aqui está sua senha:</p>
+        <h4></h4>
+      </div>
+        <div class="fomr-control">
+          <label for="confirmepassword">Confirme sua senha</label>
+          <input
+            type="text"
+            name="confirmepassword"
+            id="confirmepassword"
+            placeholder="Confirme sua senha"
+          />
+        </div>
+        <input type="submit" value="Cadastrar" id="" />
+      </div>
+    </div>
+  </body>
 </html>
