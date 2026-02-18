@@ -1,8 +1,7 @@
-/* Global styles */
 * {
-  margin: 0;
-  padding: 0;
   font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   color: #333;
 }
@@ -21,7 +20,6 @@ input:focus {
   outline: none;
 }
 
-/* Register container */
 #register-container {
   max-width: 900px;
   min-height: 80vh;
@@ -35,39 +33,38 @@ input:focus {
   background: url("/img/john-lee.jpg");
   background-size: cover;
   background-position: center;
+  background-blend-mode: saturation;
   width: 50%;
 }
 
 #banner-layer {
-  background-color: rgba(25, 1, 122, 0.3);
-  box-shadow: inset 0 0 10rem rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  width: 100%;
+  background-color: rgba(25, 11, 122, 0.7);
   height: 100%;
+  padding: 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #register-banner h1 {
   font-size: 4rem;
+  word-spacing: 50rem;
   margin-bottom: 1.5rem;
   color: #fff;
-  word-spacing: 50rem;
 }
 
-/* Form container */
 #register-form {
   background-color: #fdfdfd;
+  padding: 2rem;
   width: 50%;
   display: flex;
-  padding: 2rem;
   flex-direction: column;
 }
 
 #register-form h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
 }
 
 #register-form p {
@@ -91,17 +88,17 @@ input:focus {
 .form-control input {
   border: none;
   border-bottom: 1px solid #aaa;
-  padding: 0.6rem;
+  padding: 0.6rem 0;
 }
 
-#generate-password {
+#open-generate-password {
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s;
 }
 
-#generate-password:hover {
-  color: #0097ff;
+#open-generate-password:hover {
+  color: #0099ff;
 }
 
 #register-form #generated-password {
@@ -116,16 +113,17 @@ input:focus {
   display: none;
 }
 
-#register-form #generated-password p{
-  color: #0010ff;
+#register-form #generated-password p {
+  color: #81d340;
   margin-bottom: 0.5rem;
 }
 
-
-#register-form input[type="submit"] {
-  background-color: #0097ff;
+#register-form input[type="submit"],
+#generate-options button,
+#copy-password {
+  background-color: #81d340;
   color: #fff;
-  opacity: .8;
+  opacity: 0.8;
   border: none;
   border-radius: 2rem;
   padding: 1rem 1.4rem;
@@ -137,4 +135,45 @@ input:focus {
 
 #register-form input[type="submit"]:hover {
   opacity: 1;
-} 
+}
+
+/* Comu */
+#generate-options {
+  margin-bottom: 1rem;
+  padding: 1em;
+  border: 1px solid #ddd;
+}
+
+#generate-options .form-control {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#generate-options label {
+  font-size: 0.8rem;
+}
+
+#generate-options input[type="text"] {
+  max-width: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#generate-options button {
+  background-color: #0097ff;
+  display: block;
+  margin: 0 auto;
+}
+
+#copy-password {
+  margin: 1rem auto;
+  background-color: transparent;
+  color: #81d340;
+  border: 2px solid #81d340;
+  padding: 0.5rem 1rem;
+}
+
+.hide {
+  display: none;
+}
