@@ -13,7 +13,12 @@ body {
 }
 
 html {
-  background: linear-gradient(180deg, rgba(234, 2, 255, 1) 0%, #0097ff 100%);
+  background: url(/img/john-lee.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: saturation;
+  width: 100%;
+  /* background: linear-gradient(180deg, rgba(234, 2, 255, 1) 0%, #0097ff 100%); */
 }
 
 input:focus {
@@ -25,12 +30,13 @@ input:focus {
   min-height: 80vh;
   margin: 2rem auto;
   display: flex;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 #register-banner {
-  background: url("/img/john-lee.jpg");
+  background: url("/img/john-lee.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: saturation;
@@ -38,7 +44,8 @@ input:focus {
 }
 
 #banner-layer {
-  background-color: rgba(25, 11, 122, 0.7);
+  background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
+  color: white;
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -54,7 +61,7 @@ input:focus {
 }
 
 #register-form {
-  background-color: #fdfdfd;
+  background-color: #fff;
   padding: 2rem;
   width: 50%;
   display: flex;
