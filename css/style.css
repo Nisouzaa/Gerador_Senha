@@ -98,13 +98,13 @@ input:focus {
   padding: 0.6rem 0;
 }
 
-#generate-password {
+#open-generate-password {
   font-weight: bold;
   cursor: pointer;
   transition: 0.4s;
 }
 
-#generate-password:hover {
+#open-generate-password:hover {
   color: #0099ff;
 }
 
@@ -144,7 +144,7 @@ input:focus {
   opacity: 1;
 }
 
-/* Comu */
+
 #generate-options {
   margin-bottom: 1rem;
   padding: 1em;
@@ -183,4 +183,4 @@ input:focus {
 
 .hide {
   display: none;
-}
+};

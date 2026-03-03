@@ -1,6 +1,16 @@
 const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
 
+// Novas funcionalidadaes 
+
+const openClosegeneratorButton = document.querySelector("#open-generate-password");
+const geneatePasswordContainer = document.querySelector("#generate-options");
+const lengthInput = document.querySelector("#length");
+const lettersInput = document.querySelector("#letters");
+const numbersInput = document.querySelector("#numbers");
+const symbolsInput = document.querySelector("#symbols");
+const copyPasswordButton = document.querySelector("#copy-password");
+
 // Function to generate a random password
 const getLetterLowercase = () => {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -22,10 +32,27 @@ const getSymbol = () => {
 const generatedPassword = (getLetterLowercase, getLetterUppercase, getNumber, getSymbol) => {
     let password = "";
 
-    const passwordLength = 10;
+    const passwordLength = lengthInput.value;
 
-    const generators = [getLetterLowercase, getLetterUppercase, getNumber, getSymbol];   
+    const generators = [];   
 
+    if (lettersInput.checked) {
+        generators.push(getLetterLowercase, getLetterUppercase);
+    }
+
+    if (numbersInput.checked) {
+        generators.push(getNumber);
+    }
+
+    if (symbolsInput.checked) {
+        generators.push(getSymbol);
+    }
+
+    if (generators.length === 0) {
+        return;
+    }
+
+    
     for (let i = 0; i < passwordLength; i = i + 4) {
         generators.forEach(() => {
             const randomValue = generators[Math.floor(Math.random() * generators.length)];
@@ -45,4 +72,8 @@ const generatedPassword = (getLetterLowercase, getLetterUppercase, getNumber, ge
 // Event listener for the generate password button
 generatePasswordButton.addEventListener("click", () => {
     generatedPassword(getLetterLowercase, getLetterUppercase, getNumber, getSymbol);
+});
+
+openClosegeneratorButton.addEventListener("click", () => {
+    geneatePasswordContainer.classList.toggle("hide");
 });
