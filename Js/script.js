@@ -87,3 +87,11 @@ generatePasswordButton.addEventListener("click", (e) => {
 openClosegeneratorButton.addEventListener("click", () => {
   geneatePasswordContainer.classList.toggle("hide");
 });
+
+copyPasswordButton.addEventListener("click", (e) => {
+  e.preventDefault;
+
+  const password = generatedPasswordElement.querySelector("h4").innerText;
+
+  console.log(password);
+});

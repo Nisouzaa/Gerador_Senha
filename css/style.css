@@ -144,7 +144,6 @@ input:focus {
   opacity: 1;
 }
 
-
 #generate-options {
   margin-bottom: 1rem;
   padding: 1em;
@@ -183,4 +182,4 @@ input:focus {
 
 .hide {
   display: none;
-};
+}
